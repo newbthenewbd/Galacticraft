@@ -5,7 +5,6 @@ import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import micdoodle8.mods.galacticraft.core.network.IPacketReceiver;
 import micdoodle8.mods.galacticraft.core.network.NetworkUtil;
 import micdoodle8.mods.galacticraft.core.network.PacketDynamic;
-import micdoodle8.mods.miccore.Annotations.NetworkedField;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.world.World;
@@ -147,23 +146,6 @@ public abstract class EntityAdvanced extends Entity implements IPacketReceiver
     {
         this.fieldCacheClient = new LinkedHashSet<Field>();
         this.fieldCacheServer = new LinkedHashSet<Field>();
-
-        for (Field field : this.getClass().getFields())
-        {
-            if (field.isAnnotationPresent(NetworkedField.class))
-            {
-                NetworkedField f = field.getAnnotation(NetworkedField.class);
-
-                if (f.targetSide() == Side.CLIENT)
-                {
-                    this.fieldCacheClient.add(field);
-                }
-                else
-                {
-                    this.fieldCacheServer.add(field);
-                }
-            }
-        }
     }
 
     @Override

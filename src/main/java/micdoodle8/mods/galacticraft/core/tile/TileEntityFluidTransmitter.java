@@ -13,7 +13,7 @@ import micdoodle8.mods.galacticraft.core.blocks.BlockFluidPipe;
 import micdoodle8.mods.galacticraft.core.fluid.FluidNetwork;
 import micdoodle8.mods.galacticraft.core.tick.TickHandlerServer;
 import micdoodle8.mods.galacticraft.core.util.OxygenUtil;
-import micdoodle8.mods.miccore.Annotations;
+import micdoodle8.mods.galacticraft.core.Annotations;
 import net.minecraft.block.Block;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.math.AxisAlignedBB;

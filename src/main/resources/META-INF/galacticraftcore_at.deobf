@@ -1,0 +1,16 @@
+public net.minecraft.entity.player.EntityPlayer sleeping
+public net.minecraft.entity.player.EntityPlayer sleepTimer
+public net.minecraft.entity.EntityLivingBase attackingPlayer
+public net.minecraft.network.EnumConnectionState STATES_BY_CLASS
+public net.minecraft.network.EnumConnectionState directionMaps
+public net.minecraft.client.renderer.EntityRenderer thirdPersonDistancePrev
+public net.minecraft.world.WorldProvider worldObj
+public net.minecraft.world.chunk.Chunk heightMapMinimum
+public net.minecraft.world.chunk.Chunk isModified
+public net.minecraft.client.renderer.EntityRenderer cameraZoom
+public net.minecraft.client.renderer.EntityRenderer cameraYaw
+public net.minecraft.client.renderer.EntityRenderer cameraPitch
+public net.minecraft.entity.EntityList classToIDMapping
+public net.minecraft.network.NetHandlerPlayServer floatingTickCount
+
+public net.minecraft.client.renderer.EntityRenderer orientCamera(F)V

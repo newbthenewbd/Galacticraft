@@ -105,8 +105,6 @@ public class TickHandlerClient
         }
     }
 
-    private static ThreadRequirementMissing missingRequirementThread;
-
     public static HashSet<TileEntityScreen> screenConnectionsUpdateList = new HashSet<TileEntityScreen>();
 
     static
@@ -430,12 +428,6 @@ public class TickHandlerClient
                 ClientProxyCore.overworldTextureRequestSent = false;
                 ClientProxyCore.flagRequestsSent.clear();
                 TickHandlerClient.clearLiquidNetworks();
-
-                if (TickHandlerClient.missingRequirementThread == null)
-                {
-                    TickHandlerClient.missingRequirementThread = new ThreadRequirementMissing(Side.CLIENT);
-                    TickHandlerClient.missingRequirementThread.start();
-                }
             }
 
             if (world != null && TickHandlerClient.spaceRaceGuiScheduled && minecraft.currentScreen == null && ConfigManagerCore.enableSpaceRaceManagerPopup)
